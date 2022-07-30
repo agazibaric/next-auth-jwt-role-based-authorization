@@ -7,20 +7,16 @@ const HomePage: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>NextAuth Role Based Authorization</title>
+        <title>NextAuth Role Protected Routes</title>
         <meta
           name="description"
-          content="NextAuth jwt authorization with role based protection"
+          content="NextAuth jwt authorization with role protected routes"
         />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          NextAuth JWT Authorization with role based protection
-        </h1>
-
+        <h1 className={styles.title}>NextAuth with Role Protected Routes</h1>
         <p className={styles.description}>Select Route</p>
-
         <div className={styles.grid}>
           <Card
             title="Login"

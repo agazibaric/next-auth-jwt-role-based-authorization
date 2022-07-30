@@ -15,15 +15,18 @@ const LoginPage: NextPage = () => {
   };
 
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>
-        NextAuth JWT Authorization with role based protection
-      </h1>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <h1 className={styles.title}>Login Page</h1>
+        <h1 className={styles.description}>
+          By clicking on the button the session will be created.
+        </h1>
 
-      <div className={styles.container} onClick={handleLogin}>
-        login
-      </div>
-    </main>
+        <div className={styles.button} onClick={handleLogin}>
+          Login
+        </div>
+      </main>
+    </div>
   );
 };
 
