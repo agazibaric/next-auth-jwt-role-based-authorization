@@ -17,12 +17,12 @@ export const Auth = ({ children, auth }: Props) => {
   const router = useRouter();
 
   useEffect(() => {
-    if (!loading) {
-      if (!hasUser) {
-        router.push(ROUTES.LOGIN);
-      } else if (!isAuthorized(session, auth.role)) {
-        router.push(auth.unauthorized);
-      }
+    if (loading) {
+      return;
+    }
+
+    if (!hasUser || !isAuthorized(session, auth.role)) {
+      router.push(auth.unauthorized);
     }
   }, [loading, hasUser, router, session, auth]);
 
