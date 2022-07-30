@@ -1,7 +1,6 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { ROUTES } from "../../const";
 import { isAuthorized } from "../../helpers";
 import { AuthProps } from "../../types";
 
