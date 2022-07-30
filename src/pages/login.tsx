@@ -4,14 +4,22 @@ import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
 
 const LoginPage: NextPage = () => {
-  const handleLogin = () => {
+  const handleLogin = (email = "", password = "") => {
     signIn("credentials", {
-      email: "user",
-      password: "password",
+      email,
+      password,
       callbackUrl: ROUTES.HOME,
     })
       .then(() => console.log("signed in"))
       .catch((err) => console.log(err));
+  };
+
+  const handleLoginAsUser = () => {
+    handleLogin("user@email.com", "password");
+  };
+
+  const handleLoginAsAdmin = () => {
+    handleLogin("admin@email.com", "admin");
   };
 
   return (
@@ -19,11 +27,15 @@ const LoginPage: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Login Page</h1>
         <h1 className={styles.description}>
-          By clicking on the button the session will be created.
+          By clicking on a button the session will be created with chosen role.
         </h1>
 
-        <div className={styles.button} onClick={handleLogin}>
-          Login
+        <div className={styles.button} onClick={handleLoginAsUser}>
+          Login as USER
+        </div>
+
+        <div className={styles.button} onClick={handleLoginAsAdmin}>
+          Login as ADMIN
         </div>
       </main>
     </div>

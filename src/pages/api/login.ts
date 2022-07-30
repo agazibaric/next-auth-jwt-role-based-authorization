@@ -6,13 +6,19 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<LoginResponse>
 ) {
-  // Create mock login response with only user role
+  const { email, password } = req.body;
+  const roles = [{ name: ROLES.USER }];
+
+  if (email === "admin@email.com" && password === "admin") {
+    roles.push({ name: ROLES.ADMIN });
+  }
+
   res.status(200).json({
     user: {
-      email: "john.doe@email.com",
+      email,
       firstName: "John",
       lastName: "Doe",
-      authorities: [{ name: ROLES.USER }],
+      authorities: roles,
     },
     token: "jwt",
   });
