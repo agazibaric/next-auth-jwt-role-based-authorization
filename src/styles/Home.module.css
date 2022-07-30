@@ -95,6 +95,7 @@
   touch-action: manipulation;
   vertical-align: baseline;
   width: auto;
+  margin-right: 1rem;
 }
 
 .button:hover,

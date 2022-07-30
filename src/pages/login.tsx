@@ -30,12 +30,14 @@ const LoginPage: NextPage = () => {
           By clicking on a button the session will be created with chosen role.
         </h1>
 
-        <div className={styles.button} onClick={handleLoginAsUser}>
-          Login as USER
-        </div>
+        <div className={styles.grid}>
+          <div className={styles.button} onClick={handleLoginAsUser}>
+            Login as USER
+          </div>
 
-        <div className={styles.button} onClick={handleLoginAsAdmin}>
-          Login as ADMIN
+          <div className={styles.button} onClick={handleLoginAsAdmin}>
+            Login as ADMIN
+          </div>
         </div>
       </main>
     </div>

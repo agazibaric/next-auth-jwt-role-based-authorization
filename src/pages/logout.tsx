@@ -15,10 +15,13 @@ const LogoutPage: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.description}>Logout Page</h1>
+        <h1 className={styles.title}>Logout Page</h1>
+        <h1 className={styles.description}>
+          Click on a button to clear up the session
+        </h1>
 
         <div className={styles.button} onClick={handleLogout}>
-          Click here clear the session
+          Logout
         </div>
       </main>
     </div>
