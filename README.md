@@ -35,3 +35,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser where you 
 `User` page can only access someone who has `USER` role. Otherwise it's redirected to the `Login` page.
 
 `Admin` page can only access someone who has `ADMIN` role. Otherwise it's redirected to the `Login` page.
+
+You will be redirected to `Unauthorized` page if you don't have a permission to access the route.
