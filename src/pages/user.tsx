@@ -1,10 +1,9 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 import { Loading } from "../components";
 import { ROLES, ROUTES } from "../const";
-import { AuthComponent } from "../types";
 import styles from "../styles/Home.module.css";
-import { useRouter } from "next/router";
-import Link from "next/link";
+import { AuthComponent } from "../types";
 
 const UserPage: NextPage & AuthComponent = () => {
   return (
