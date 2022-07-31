@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { Loading } from "../components";
 import { ROLES, ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
