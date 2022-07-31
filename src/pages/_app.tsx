@@ -8,11 +8,14 @@ export type CustomAppProps = AppProps & {
   Component: AuthComponent;
 };
 
-function App({ Component, pageProps }: CustomAppProps) {
+function App({
+  Component,
+  pageProps: { session, ...pageProps },
+}: CustomAppProps) {
   const { auth } = Component;
 
   return (
-    <SessionProvider session={pageProps.session}>
+    <SessionProvider session={session} refetchInterval={5 * 60}>
       {auth ? (
         <Auth auth={auth}>
           <Component {...pageProps} />
