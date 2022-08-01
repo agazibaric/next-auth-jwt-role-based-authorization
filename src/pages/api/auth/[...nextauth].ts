@@ -1,5 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
+import { NEXT_AUTH_SECRET } from "../../../const";
 import { createNextAuthUser } from "../../../helpers";
 import { authService } from "../../../services";
 
@@ -53,6 +54,8 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+
+  secret: NEXT_AUTH_SECRET,
 };
 
 export default NextAuth(authOptions);

@@ -20,6 +20,7 @@ export default function handler(
       lastName: "Doe",
       authorities: roles,
     },
-    token: "jwt",
+    token:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4uZG9lQGVtYWlsLmNvbSIsImZpcnN0TmFtZSI6IkpvaG4iLCJsYXN0TmFtZSI6IkRvZSIsImF1dGhvcml0aWVzIjoicm9sZXMifQ.piqoZKqLBSggCTrxuES3ATZkhOJzlns8-JxKbNVwnWk",
   });
 }
