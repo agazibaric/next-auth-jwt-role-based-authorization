@@ -26,11 +26,11 @@ Run the development server:
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser where you will see the home page with four routes you can go to: [Sign In](http://localhost:3000/signIn), [Logout](http://localhost:3000/logout), [User](http://localhost:3000/user), [Admin](http://localhost:3000/admin).
+Open [http://localhost:3000](http://localhost:3000) with your browser where you will see the home page with four routes you can go to: [Sign In](http://localhost:3000/signIn), [Sign Out](http://localhost:3000/signOut), [User](http://localhost:3000/user), [Admin](http://localhost:3000/admin).
 
 `Sign In` page will allow you to authenticate the user and create session with chosen role.
 
-`Logout` page will clear up the session.
+`Sign Out` page will clear up the session.
 
 `User` page can only access someone who has `USER` role. Otherwise it's redirected to the `Unauthorized` page.
 

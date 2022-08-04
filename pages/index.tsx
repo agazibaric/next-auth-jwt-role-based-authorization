@@ -23,7 +23,7 @@ const HomePage: NextPage = () => {
             subtitle="Authenticate user to create session"
             route="signIn"
           />
-          <Card title="Logout" subtitle="Clear up session" route="logout" />
+          <Card title="Sign Out" subtitle="Clear up session" route="signOut" />
           <Card
             title="User Page"
             subtitle="Only user role has access to it"
