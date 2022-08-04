@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
@@ -6,6 +7,14 @@ import styles from "../styles/Home.module.css";
 const UnauthorizedPage: NextPage = () => {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Unauthorized Page</title>
+        <meta
+          name="description"
+          content="Unauthorized page which signals that you do not have the right permissions to access the page"
+        />
+      </Head>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
           You are unauthorized to see the resource!

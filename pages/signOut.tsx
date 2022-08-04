@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { signOut } from "next-auth/react";
+import Head from "next/head";
 import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
 
@@ -14,6 +15,14 @@ const SignOutPage: NextPage = () => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Sign Out Page</title>
+        <meta
+          name="description"
+          content="Sign out page which clears the session"
+        />
+      </Head>
+
       <main className={styles.main}>
         <h1 className={styles.title}>Sign Out Page</h1>
         <h1 className={styles.description}>

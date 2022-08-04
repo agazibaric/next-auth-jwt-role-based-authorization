@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { signIn } from "next-auth/react";
+import Head from "next/head";
 import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
 
@@ -24,6 +25,11 @@ const SignInPage: NextPage = () => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Sign In Page</title>
+        <meta name="description" content="Sign in page which creates session" />
+      </Head>
+
       <main className={styles.main}>
         <h1 className={styles.title}>Sign In Page</h1>
         <h1 className={styles.descriptivon}>
