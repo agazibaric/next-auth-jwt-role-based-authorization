@@ -1,16 +1,4 @@
-This is an example project that using [Next.js](https://nextjs.org/) with [NextAuth](https://next-auth.js.org/) to provide custom authorization with role based protected routes.
-
-Each page can be protected by assigning such property to it:
-
-```js
-SomePage.auth = {
-  role: ROLES.USER,
-  unauthorized: ROUTES.SIGN_IN,
-  loading: <Loading />,
-};
-```
-
-`SomePage` can only be access by someone who has the role `ROLES.USER`. If it's not authorized redirect it to a route specified by `unauthorized` property. While the session is loading show `<Loading>` component. 
+This is an example project that using [Next.js](https://nextjs.org/) with [NextAuth](https://next-auth.js.org/) to provide custom authorization with role based protected routes via Next.js middleware.
 
 ## Getting Started
 
