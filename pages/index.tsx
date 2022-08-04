@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Card } from "../components";
+import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
 
 const HomePage: NextPage = () => {
@@ -21,18 +22,22 @@ const HomePage: NextPage = () => {
           <Card
             title="Sign In"
             subtitle="Authenticate user to create session"
-            route="signIn"
+            route={ROUTES.SIGN_IN}
           />
-          <Card title="Sign Out" subtitle="Clear up session" route="signOut" />
+          <Card
+            title="Sign Out"
+            subtitle="Clear up session"
+            route={ROUTES.SIGN_OUT}
+          />
           <Card
             title="User Page"
             subtitle="Only user role has access to it"
-            route="user"
+            route={ROUTES.USER}
           />
           <Card
             title="Admin Page"
             subtitle="Only admin role has access to it"
-            route="admin"
+            route={ROUTES.ADMIN}
           />
         </div>
       </main>
