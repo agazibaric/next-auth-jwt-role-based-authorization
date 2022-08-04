@@ -17,8 +17,8 @@ const UnauthorizedPage: NextPage = () => {
             <div className={styles.button}>Go to Home Page</div>
           </Link>
 
-          <Link href={ROUTES.LOGIN}>
-            <div className={styles.button}>Login</div>
+          <Link href={ROUTES.SIGN_IN}>
+            <div className={styles.button}>Sign In</div>
           </Link>
         </div>
       </main>

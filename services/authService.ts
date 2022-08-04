@@ -1,13 +1,13 @@
 import { AUTH_API } from "../const";
 import { apiClient } from "../lib";
-import { LoginResponse } from "../types";
+import { SignInResponse } from "../types";
 
-const login = async (email: string, password: string) => {
+const signIn = async (email: string, password: string) => {
   return apiClient
-    .post<LoginResponse>(AUTH_API.LOGIN, { email, password })
+    .post<SignInResponse>(AUTH_API.SIGN_IN, { email, password })
     .then((resp) => resp.data);
 };
 
 export const authService = {
-  login,
+  signIn,
 };

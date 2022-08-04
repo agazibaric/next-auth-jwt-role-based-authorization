@@ -3,8 +3,8 @@ import { signIn } from "next-auth/react";
 import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
 
-const LoginPage: NextPage = () => {
-  const handleLogin = (email = "", password = "") => {
+const SignInPage: NextPage = () => {
+  const handleSignIn = (email = "", password = "") => {
     signIn("credentials", {
       email,
       password,
@@ -14,29 +14,29 @@ const LoginPage: NextPage = () => {
       .catch((err) => console.log(err));
   };
 
-  const handleLoginAsUser = () => {
-    handleLogin("user@email.com", "password");
+  const handleSignInAsUser = () => {
+    handleSignIn("user@email.com", "password");
   };
 
-  const handleLoginAsAdmin = () => {
-    handleLogin("admin@email.com", "admin");
+  const handleSignInAsAdmin = () => {
+    handleSignIn("admin@email.com", "admin");
   };
 
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Login Page</h1>
-        <h1 className={styles.description}>
+        <h1 className={styles.title}>Sign In Page</h1>
+        <h1 className={styles.descriptivon}>
           By clicking on a button the session will be created with chosen role.
         </h1>
 
         <div className={styles.grid}>
-          <div className={styles.button} onClick={handleLoginAsUser}>
-            Login as USER
+          <div className={styles.button} onClick={handleSignInAsUser}>
+            Sign in as USER
           </div>
 
-          <div className={styles.button} onClick={handleLoginAsAdmin}>
-            Login as ADMIN
+          <div className={styles.button} onClick={handleSignInAsAdmin}>
+            Sign in as ADMIN
           </div>
         </div>
       </main>
@@ -44,4 +44,4 @@ const LoginPage: NextPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignInPage;

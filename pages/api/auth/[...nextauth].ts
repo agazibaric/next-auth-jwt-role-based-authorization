@@ -6,8 +6,8 @@ import { authService } from "../../../services";
 
 export const authOptions: NextAuthOptions = {
   pages: {
-    signIn: '/login',
-    signOut: '/logout',
+    signIn: "/signIn",
+    signOut: "/logout",
   },
   providers: [
     Credentials({
@@ -19,15 +19,15 @@ export const authOptions: NextAuthOptions = {
       authorize: async (credentials = { email: "", password: "" }) => {
         try {
           const { email, password } = credentials;
-          const loginResponse = await authService.login(email, password);
+          const signInResponse = await authService.signIn(email, password);
 
-          if (loginResponse) {
-            return createNextAuthUser(loginResponse);
+          if (signInResponse) {
+            return createNextAuthUser(signInResponse);
           }
 
           return null;
         } catch (err) {
-          throw new Error(`Failed to login ${JSON.stringify({ err })}`);
+          throw new Error(`Failed to sign in ${JSON.stringify({ err })}`);
         }
       },
     }),

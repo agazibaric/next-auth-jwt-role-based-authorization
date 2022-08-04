@@ -19,9 +19,9 @@ const HomePage: NextPage = () => {
         <p className={styles.description}>Select Route</p>
         <div className={styles.grid}>
           <Card
-            title="Login"
+            title="Sign In"
             subtitle="Authenticate user to create session"
-            route="login"
+            route="signIn"
           />
           <Card title="Logout" subtitle="Clear up session" route="logout" />
           <Card

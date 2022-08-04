@@ -1,3 +1,3 @@
 export const AUTH_API = {
-  LOGIN: "/login",
+  SIGN_IN: "/signIn",
 };

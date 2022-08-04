@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ROLES } from "../../const";
-import { LoginResponse } from "../../types";
+import { SignInResponse } from "../../types";
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<LoginResponse>
+  res: NextApiResponse<SignInResponse>
 ) {
   const { email, password } = req.body;
   const roles = [{ name: ROLES.USER }];
