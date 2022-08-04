@@ -1,6 +1,5 @@
 import { Session } from "next-auth";
 import { getToken } from "next-auth/jwt";
-import { withAuth } from "next-auth/middleware";
 import { NextRequest, NextResponse } from "next/server";
 import { NEXT_AUTH_SECRET } from "./const";
 import { getRequiredPageRole, isAuthorized } from "./helpers";

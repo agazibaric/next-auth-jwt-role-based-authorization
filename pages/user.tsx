@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { Loading } from "../components";
-import { ROLES, ROUTES } from "../const";
+import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
-import { AuthComponent } from "../types";
 
-const UserPage: NextPage & AuthComponent = () => {
+const UserPage: NextPage = () => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -18,12 +16,6 @@ const UserPage: NextPage & AuthComponent = () => {
       </main>
     </div>
   );
-};
-
-UserPage.auth = {
-  role: ROLES.USER,
-  unauthorized: ROUTES.UNAUTHORIZED,
-  loading: <Loading />,
 };
 
 export default UserPage;

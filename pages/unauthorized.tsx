@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { ROUTES } from "../const";
 import styles from "../styles/Home.module.css";
 
 const UnauthorizedPage: NextPage = () => {
-  const router = useRouter();
-
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -15,19 +13,13 @@ const UnauthorizedPage: NextPage = () => {
         <h1 className={styles.description}>403 Forbidden</h1>
 
         <div className={styles.grid}>
-          <div
-            className={styles.button}
-            onClick={() => router.push(ROUTES.HOME)}
-          >
-            Go to Home Page
-          </div>
+          <Link href={ROUTES.HOME}>
+            <div className={styles.button}>Go to Home Page</div>
+          </Link>
 
-          <div
-            className={styles.button}
-            onClick={() => router.push(ROUTES.LOGIN)}
-          >
-            Login
-          </div>
+          <Link href={ROUTES.LOGIN}>
+            <div className={styles.button}>Login</div>
+          </Link>
         </div>
       </main>
     </div>

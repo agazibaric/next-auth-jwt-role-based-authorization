@@ -7,6 +7,7 @@ import { authService } from "../../../services";
 export const authOptions: NextAuthOptions = {
   pages: {
     signIn: '/login',
+    signOut: '/logout',
   },
   providers: [
     Credentials({
