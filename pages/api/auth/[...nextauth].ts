@@ -5,6 +5,9 @@ import { createNextAuthUser } from "../../../helpers";
 import { authService } from "../../../services";
 
 export const authOptions: NextAuthOptions = {
+  pages: {
+    signIn: '/login',
+  },
   providers: [
     Credentials({
       name: "Credentials",

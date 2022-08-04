@@ -14,8 +14,20 @@ const UnauthorizedPage: NextPage = () => {
         </h1>
         <h1 className={styles.description}>403 Forbidden</h1>
 
-        <div className={styles.button} onClick={() => router.push(ROUTES.HOME)}>
-          Go to Home Page
+        <div className={styles.grid}>
+          <div
+            className={styles.button}
+            onClick={() => router.push(ROUTES.HOME)}
+          >
+            Go to Home Page
+          </div>
+
+          <div
+            className={styles.button}
+            onClick={() => router.push(ROUTES.LOGIN)}
+          >
+            Login
+          </div>
         </div>
       </main>
     </div>
